@@ -1,0 +1,21 @@
+{
+  "name": "single-page-app",
+  "version": "1.0.0",
+  "description": "== README",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "babelify": "^6.1.1",
+    "browserify": "^6.3.4",
+    "browserify-incremental": "^1.5.0",
+    "react": "^0.13.3",
+    "react-router": "~0.13.3"
+  }
+}
