@@ -12,9 +12,13 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "6to5": "^3.6.5",
+    "babel-es6-polyfill": "^1.0.1",
     "babelify": "^6.1.1",
     "browserify": "^6.3.4",
     "browserify-incremental": "^1.5.0",
+    "flummox": "^3.5.2",
+    "immutable": "^3.7.3",
     "react": "^0.13.3",
     "react-router": "~0.13.3"
   }

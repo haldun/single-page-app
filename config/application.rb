@@ -23,6 +23,6 @@ module SinglePageApp
     # Do not swallow errors in after_commit/after_rollback callbacks.
     config.active_record.raise_in_transactional_callbacks = true
     config.browserify_rails.force = true
-    config.browserify_rails.commandline_options = "-t babelify"
+    config.browserify_rails.commandline_options = "-t [ babelify --optional es7.asyncFunctions ]"
   end
 end
