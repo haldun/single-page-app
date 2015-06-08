@@ -10,12 +10,10 @@ export default class ItemDetailHandler extends React.Component {
 
   static async routerWillRun({ flux, state }) {
     const appActions = flux.getActions('app');
-    // TODO Get id
-    return await appActions.getAllItems();
+    return await appActions.getItemDetail(state.params.id);
   }
 
   render() {
-    console.log("ItemDetailHandler");
     return (
       <div>
         <Flux

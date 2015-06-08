@@ -3,6 +3,10 @@ class ItemsController < ActionController::API
     render json: Item.all
   end
 
+  def show
+    render json: Item.find(params[:id])
+  end
+
   def create
     item = Item.new(item_params)
     if item.save

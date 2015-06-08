@@ -16,7 +16,13 @@ export default class AppActions extends Actions {
     }
   }
 
-  createNewItem() {
+  async getItemDetail(id) {
+    console.log(`getting item ${id}`);
+    let response = await fetch(siteUrl(`/items/${id}.json`));
+    return await response.json();
+  }
+
+  createNewItem(title) {
     return true;
   }
 }

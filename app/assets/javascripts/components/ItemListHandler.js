@@ -9,6 +9,10 @@ class ItemListHandler extends React.Component {
       <ItemList {...this.props} />
     );
   }
+
+  static async routerWillRun({ flux }) {
+    return await flux.getActions('app').getAllItems();
+  }
 }
 
 ItemListHandler = connectToStores(ItemListHandler, {
