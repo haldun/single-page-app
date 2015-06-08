@@ -21,7 +21,7 @@ export default class ItemDetailHandler extends React.Component {
         <Flux
           connectToStores={{
             items: (store, props) => ({
-              item: store.getItem(54)
+              item: store.getItem(this.props.params.id)
             })
           }}
           render={({ item }) => <Item item={item} />}

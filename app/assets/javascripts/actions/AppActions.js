@@ -1,24 +1,19 @@
 import { Actions } from 'flummox';
+import { siteUrl } from '../utils/UrlUtils';
 
 export default class AppActions extends Actions {
-  getAllItems() {
-    return this.receiveItems([
-      {
-        id: 1,
-        text: "item 1"
-      },
-      {
-        id: 2,
-        text: "item 2"
-      },
-      {
-        id: 3,
-        text: "item 3"
-      }]);
-  }
-
-  receiveItems(items) {
-    return items;
+  async getAllItems() {
+    let response;
+    try {
+      const url = siteUrl('/items.json');
+      response = await fetch(url)
+      return await response.json();
+    } catch (error) {
+      // TODO what to do?
+      const url = siteUrl('/items.json');
+      response = await fetch(url)
+      return await response.json();
+    }
   }
 
   createNewItem() {

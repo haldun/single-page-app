@@ -3,10 +3,9 @@ import Item from './Item';
 
 export default class ItemList extends React.Component {
   render() {
-    console.log(this.context);
-    console.log(this.props);
+    console.log(this.props.items);
+
     let itemNodes = this.props.items.map((item, index) => {
-      console.log(index);
       return <Item key={index} item={item} />
     });
     return (
