@@ -19,7 +19,7 @@ export default class ItemList extends React.Component {
 
   handleAddItem(e) {
     e.preventDefault();
-    this.props.flux.getActions('app').createNewItem();
+    this.props.flux.getActions('app').createNewItem("yeni yeni item");
   }
 
   handleFetchItem(e) {

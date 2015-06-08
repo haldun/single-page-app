@@ -36,7 +36,12 @@ export default class ItemStore extends Store {
     });
   }
 
-  handleCreateNewItem(newItem) {
+  handleCreateNewItem(title) {
+    console.log("handleCreateNewItem: ", title);
+    const newItem = {
+      id: new Date().getTime(),
+      title: title
+    };
     const items = {
       [newItem.id]: newItem
     };

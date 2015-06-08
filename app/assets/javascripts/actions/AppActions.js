@@ -23,6 +23,6 @@ export default class AppActions extends Actions {
   }
 
   createNewItem(title) {
-    return true;
+    return title;
   }
 }
